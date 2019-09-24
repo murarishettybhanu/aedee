@@ -1,0 +1,281 @@
+<?php
+$message_contact = "";
+if(isset($_POST['project_requirement_form'])){
+
+    $to = 'contact@aedee.in';
+
+// subject
+    $subject = 'Project Requirements from Aedee.in';
+
+// message
+    $message = '
+<html>
+<head>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333">
+	<tr>
+		<td bgcolor="#E4E4E4"><table width="100%" border="0" cellspacing="1" cellpadding="5">
+			<tr>
+				<th colspan="2" bgcolor="#F9F9F9">Customer Feedback</th>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFFF" width="20%">Name:</td>
+				<td bgcolor="#FFFFFF">'.$_POST['customername'].'</td>
+			</tr>
+
+			<tr>
+				<td bgcolor="#FFFFFF">Email:</td>
+				<td bgcolor="#FFFFFF">'.$_POST['email'].'</td>
+			</tr>
+			<tr>
+				<td bgcolor="#F9F9F9">Phone:</td>
+				<td bgcolor="#F9F9F9">'.$_POST['mobile'].'</td>
+			</tr>
+
+			<tr>
+				<td bgcolor="#FFFFFF">Message</td>
+				<td bgcolor="#FFFFFF">'.$_POST['message'].'</td>
+			</tr>
+
+		</table></td>
+	</tr>
+</table>
+
+</body>
+</html>
+';
+
+// To send HTML mail, the Content-type header must be set
+$headers = 'MIME-Version: 1.0' . "\r\n";
+$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+
+// Additional headers
+//$headers .= 'To: Mary <mary@example.com>, Kelly <kelly@example.com>' . "\r\n";
+$headers .= 'From: '.$_POST['customername'].' <'.$_POST['email'].'>' . "\r\n";
+
+// Mail it
+mail($to, $subject, $message, $headers);
+
+$message_contact = "Thank you for your feedback.";
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Aedee Design Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/responsive.css" type="text/css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+</head>
+
+<body>
+
+	<div class="fullcontainer inner_full_container">
+		<div class="container">
+			<header>
+				<div class="logo"><a href="index.html"><img src="images/logo.png" alt="" width="50%"></a></div>
+				<div class="topnav" id="myTopnav">
+					<ul>
+						<li><a href="about.html">About</a></li>
+						<li><a href="what_we_do.html">What we do</a></li>
+						<li><a href="work.html">Work</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<!-- <li class="hire"><a href="#">We're Hiring</a></li> -->
+
+					</ul>
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+				</div>
+			</header>
+
+			 
+		</div>
+	</div>
+
+	<div class="fullcontainer inner_full_container">
+		 <div class="container inner_container">
+		 	<div class="middle_section">
+		 		<div class="about_info">
+		 			<h3>Project Requirements</h3>
+		 			
+		 			<div class="req_form">
+
+						<form method="post" data-toggle="validator" role="form" >
+
+		 					<div class="row form_section">
+
+		 						<h4>Little about you</h4>
+    
+							    <div class="row req_form_row">
+								    <div class="group col-sm-6 col-xs-12 about_field"> 
+								      <input type="text" id="firstname" name="firstname"  required>
+								      
+								      <span class="bar"></span>
+								      <label>First Name</label>
+								    </div>
+								      
+								    <div class="group col-sm-6 col-xs-12 about_field">      
+								      <input type="text" id="lastname" name="lastname" required>
+								       
+								      <span class="bar"></span>
+								      <label>Last Name</label>
+								    </div>
+								</div>
+
+								 <div class="row req_form_row">
+								    <div class="group col-sm-6 col-xs-12 about_field"> 
+								      <input type="email" id="email" name="email" required>
+								      
+								      <span class="bar"></span>
+								      <label>Email</label>
+								    </div>
+								      
+								    <div class="group col-sm-6 col-xs-12 about_field">      
+								      <input type="text" id="phone" name="phone" required>
+								       
+								      <span class="bar"></span>
+								      <label>Phone</label>
+								    </div>
+								</div>
+
+						</div>
+
+						<div class="row form_section">
+
+		 						<h4>About your project</h4>
+    
+							    <div class="row req_form_row proj_type">
+								     <ul>
+								     	<li>
+								     		<input type="checkbox" id="mobile_pro" name="your_project" class="ad_check">
+											<label for="mobile_pro">
+											     Mobile
+											</label>
+								     	</li>
+								     	<li>
+								     		<input type="checkbox" id="web_pro" name="your_project" class="ad_check">
+											<label for="web_pro">
+											     Web
+											</label>
+								     	</li>
+								     	<li>
+								     		<input type="checkbox" id="brand_pro" name="your_project" class="ad_check">
+											<label for="brand_pro">
+											     Brand &amp; Identity
+											</label>
+								     	</li>
+								     </ul>
+								</div>
+
+								  
+
+						</div>
+
+
+						<div class="row form_section project_summary">
+
+		 						<h4>Project Summary</h4>
+    
+							    <div class="row req_form_row">
+								    <div class="group col-sm-12 about_field"> 
+								      
+								    	<textarea type="text" id="projectsummary" name="projectsummary" > </textarea>
+								      
+								    </div>
+								      
+								     
+								</div>
+
+								  
+
+						</div>
+
+						<div class="row form_section submit_row">
+							
+							<button type="submit" name="project_requirement_form"  class="submit_btn"> Send us your requirements</button>
+
+						</div>
+					    
+					  </form>
+
+		 			</div>
+
+		 		</div>
+
+		 		 
+		 	</div>
+		 </div>
+	</div>
+
+	
+
+	<div class="fullcontainer footer_section">
+		<div class="container">
+			<footer>
+				<h4 class="textcenter">Together, we're meant to make a difference.</h4>
+				<h2 class="textcenter"><a href="letstalk.html">Let's talk</a></h2>
+
+				<div class="footer_contact_info">
+					<div class="col-md-4 col-xs-12 foot_contact textcenter">
+						<a href="mailto:contact@aedee.in">contact@aedee.in</a>					
+					</div>						
+					<div class="col-md-4 col-xs-12 textcenter social-links">
+						<li><a href="https://www.facebook.com/Aedeedesigns" target="_blank"> <i class="fab fa-facebook-f"></i></a></li>
+						<li><a href="https://dribbble.com/Aedeedesigns" target="_blank"><i class="fab fa-dribbble" target="_blank"></i></a></li>
+						<li><a href="https://www.instagram.com/aedeestudio/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/aedee-design-studio/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>									
+					</div>				
+					<div class="col-md-4 col-xs-12 textright copyright_info" style="float:right">
+					&copy; 2018 Aedee Design Studio Pvt Ltd.
+				</div>									
+				</div>
+
+			</footer>
+		</div>
+	</div>
+
+
+	<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+@media screen and (max-width: 1024px) {
+header{
+	margin: 15px 0;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+.footer_section{
+	padding: 30px 0;
+}
+.footer_contact_info{
+	margin: 25px 2% 0;
+	max-width: 96%;
+	padding: 15px;
+}
+.inner_container{
+	padding: 0 15px;
+}
+.founders_info{
+	padding: 30px;
+	min-height: 410px;
+}
+.service_list {
+    margin: 15px 0 0;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+.project_container{
+	height: auto;
+	display: table;
+	float: inherit;
+	min-height: 380px;
+}
+.project_container .half_section {
+	display: table-cell;
+	vertical-align: middle;
+	float: inherit;
+	min-height: 38vh;
+}
+.half_section img{
+	max-width: 90%;
+}
+.founders_info{
+	padding: 30px;
+	min-height: 410px;
+	max-width: 48%;
+}
+.middle_section{
+	padding: 4vh 0 0;
+}
+.about_info p {
+    font-size: 25px;
+    line-height: 38px;
+}
+.founders_info h2{
+	font-size: 30px;
+}
+.founders_info h5 {
+    margin: 10px 0 15px;
+    font-size: 18px;
+}
+.about_info {
+    margin-bottom: 10px;
+}
+.founders_info{
+	margin-bottom: 20px;
+}
+.service_list ul li, .cotnact_list ul li{
+	padding-right: 30px;
+}
+.req_form {
+    width: 100%;
+}
+.proj_type ul li{
+	margin-right: 40px;
+}
+.proj_type ul li:last-child{
+	margin-right: 0;
+}
+.form_section h4{
+	margin: 0px 0 25px;
+}
+.proj_type, .submit_row {
+	margin: 0;
+}
+
+}
+
+
+@media screen and (max-width: 767px) {
+body{
+	font-size: 15px;
+}
+
+
+.banner_info_container{
+	padding: 0 15px;
+}
+.footer_section {
+    padding: 15px 0;
+}
+.banner_info_container h2 {
+    font-size: 40px;
+    line-height: 40px;
+}
+.banner_info_container h4 {
+    margin-top: -15px;
+}
+.down_arrow{
+	bottom: 0;
+}
+header{
+	position: relative;
+	z-index: 1;
+}
+.about_info p {
+    font-size: 20px;
+    line-height: 30px;
+}
+.founders_info h2 {
+    font-size: 26px;
+}
+.founders_info p{
+	font-size: 17px;
+	line-height: 25px;
+}
+.founders_info{
+	padding: 15px;
+}
+.service_list ul li, .cotnact_list ul li{
+	width: 50%;
+	padding-bottom: 20px;
+}
+
+footer{
+	margin: 15px;
+}
+
+.col-xs-12{
+	width: 100%;
+}
+ul.mail_phone li:first-child {
+    margin-right: 20px;
+}
+.mail_phone, .copyright_info{
+	text-align: center;
+}
+.say_hello{
+	margin: 10px 0;
+}
+.cotnact_list ul li{
+	width: 50%;
+}
+.cotnact_list ul li {
+    font-size: 18px;
+    line-height: 28px;
+}
+.cotnact_list ul li span {
+    font-size: 16px;
+}
+.location_info {
+    font-size: 18px;
+    line-height: 28px;
+}
+.about_field{
+	padding-right: 0;
+}
+
+.submit_btn {
+    padding: 14px 22px;
+    font: normal 18px/22px 'FuturaBookfont';
+}
+
+}
+
+@media screen and (max-width: 500px) {
+.proj_type ul li {
+    margin-right: 10px;
+}
+
+}
+
+@media screen and (max-width: 430px) {
+.banner_info_container h2 {
+    font-size: 32px;
+    line-height: 36px;
+}
+.banner_info_container h4 {
+    font-size: 14px;
+}
+.topnav .icon{
+	font-size: 24px;
+}
+.col-xs-12{
+	width: 100%;
+}
+.foot_contact, .copyright_info{
+	text-align: center;
+}
+ul.mail_phone li:first-child{
+	margin-right: 0;
+}
+footer h4{
+	font-size: 16px;
+	line-height: 20px;
+}
+
+footer h2 {
+    font-size: 24px;
+}
+.footer_contact_info {
+    margin: 5px 4% 0;
+    max-width: 92%;
+}
+.middle_section {
+    padding: 0;
+}
+.about_info h3, .our_values_info h3, .our_services_info h3, .location_info h3{
+	margin-bottom: 15px;
+}
+.founders_info{
+	width: 100%;
+	max-width: 100%;
+	min-height: inherit;
+}
+	.service_list.whatwedo_list ul li{
+		width: 100%;
+	}
+.service_list ul li, .service_list ul li:last-child{
+	width: 100%;
+	padding-right: 0;
+	margin-bottom: 20px;
+}
+.service_list ul li h4{
+	margin: 10px 0 0;
+}
+.service_list ul li:first-child{
+	margin-top: 15px;
+}
+.service_list ul li p{
+	margin-top: 5px;
+}
+
+.service_list ul li{
+	padding-bottom: 0;
+}
+
+.project_container .half_section{
+	width: 100%;
+	display: block;
+	min-height: 65vh;
+}
+.half_section img{
+	max-height: 350px;
+}
+.half_section img.corn_coffee_logo {
+    max-width: 80%;
+}
+.cotnact_list ul li{
+	width: 100%;
+}
+.proj_type ul li{
+	display: block;
+}
+	.left-section{
+		margin-top: 0px;
+		width: 100%;
+	}
+	.right-section{
+		width: 100%;
+	}
+
+}
